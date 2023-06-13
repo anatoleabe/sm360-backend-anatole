@@ -1,4 +1,5 @@
 HELP.md
+# Compiled class files
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -31,3 +32,15 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Dependency directories
+lib/
+bin/
