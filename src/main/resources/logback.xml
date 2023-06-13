@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
+	<property name="HOME_LOG" value="logs/sm360Api-logs.log"/>
+	
+    <!-- Define the loggers -->
+    <logger name="com.sm360" level="INFO"/>
+
+    <!-- Define the appenders -->
+    <appender name="FILE-ROLLING" class="ch.qos.logback.core.FileAppender">
+        <file>${HOME_LOG}</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+   
+
+    <!-- https://logback.qos.ch/manual/appenders.html#AsyncAppender -->
+    <!-- AsyncAppender will drop events of level TRACE, DEBUG and INFO if its queue is 80% full -->
+    <appender class="ch.qos.logback.classic.AsyncAppender" name="ASYNC">
+        <appender-ref ref="FILE-ROLLING"/>
+        <!-- defaulr 256 -->
+        <queueSize>512</queueSize>
+    </appender>
+
+
+    <!-- Attach the appenders to the loggers -->
+    
+    <root level="error" name="com.sm360">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE-ROLLING"/>
+    </root>
+
+    <root level="info" name="com.sm360">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE-ROLLING"/>
+    </root>
+    
+</configuration>
