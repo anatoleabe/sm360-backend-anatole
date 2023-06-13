@@ -35,7 +35,7 @@ public class Category implements Serializable {
     private String name;
     
     @Column(name = "tier_limit")
-    private Integer tierLimit; // a number of published listings a dealer can have online
+    private Integer tierLimit; //a number of published listings a dealer can have online
 
     @OneToMany(mappedBy = "category")
     @JsonIgnore
