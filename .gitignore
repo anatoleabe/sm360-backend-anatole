@@ -36,6 +36,9 @@ build/
 # Log files
 *.log
 
+# db files
+*.db
+
 # Package files
 *.jar
 *.war
