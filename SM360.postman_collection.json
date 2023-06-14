@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "94f3034c-3deb-4a8e-8065-e649b0c2b1ba",
+		"name": "SM360",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1005777"
+	},
+	"item": [
+		{
+			"name": "1-Categories",
+			"item": [
+				{
+					"name": "CREATE_CATEGORY",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"name\": \"Luxury\",\n            \"tierLimit\": 30\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "POST LISTING"
+					},
+					"response": []
+				},
+				{
+					"name": "GET_CATEGORIES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_CATEGORIY",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/categories/:categoryId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"categories",
+								":categoryId"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_CATEGORY",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"name\": \"PROD 2\",\n            \"tierLimit\": 300\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/categories/:categoryId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"categories",
+								":categoryId"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2-Dealers",
+			"item": [
+				{
+					"name": "CREATE_DEALER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\": \"Jean Doe\",\n        \"category\": \"e20ee91e-9bb0-40d6-a3b8-d1b0b7f579b7\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/dealers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"dealers"
+							]
+						},
+						"description": "POST LISTING"
+					},
+					"response": []
+				},
+				{
+					"name": "GET_DEALERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/dealers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"dealers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_DEALER",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/dealers/:dealerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"dealers",
+								":dealerId"
+							],
+							"variable": [
+								{
+									"key": "dealerId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_DEALER",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\": \"ATEBA OWONA 2\",\n        \"category\": \"00000000-0000-0000-0000-000000000003\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/dealers/:dealerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"dealers",
+								":dealerId"
+							],
+							"variable": [
+								{
+									"key": "dealerId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_dealer_listings_by_state_draft;",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"dealer\": \"00000000-0000-0000-0000-000000000005\",\n        \"vehicle\": \"TOYOTA LANDCRUSER PRADO 20015\",\n        \"price\": 20005.0\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/listings/dealer/00000000-0000-0000-0000-000000000005?state=DRAFT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"listings",
+								"dealer",
+								"00000000-0000-0000-0000-000000000005"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "DRAFT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_dealer_listings_by_state_published",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"dealer\": \"00000000-0000-0000-0000-000000000005\",\n        \"vehicle\": \"TOYOTA LANDCRUSER PRADO 20015\",\n        \"price\": 20005.0\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/listings/dealer/:dealerId?state=PUBLISHED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"listings",
+								"dealer",
+								":dealerId"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "PUBLISHED"
+								}
+							],
+							"variable": [
+								{
+									"key": "dealerId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3-Listings",
+			"item": [
+				{
+					"name": "CREATE_LISTING",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"dealer\": \"c6d18aa6-80fb-492f-91e5-32a2594f0417\",\n        \"vehicle\": \"TOYOTA AVENSIS 20015\",\n        \"price\": 15000.0,\n        \"state\": \"PUBLISHED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/listings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"listings"
+							]
+						},
+						"description": "POST LISTING"
+					},
+					"response": []
+				},
+				{
+					"name": "GET_LISTINGS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/listings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"listings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_LISTING",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/Listings/:listingId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Listings",
+								":listingId"
+							],
+							"variable": [
+								{
+									"key": "listingId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_LISTING",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"dealer\": \"00000000-0000-0000-0000-000000000005\",\n        \"vehicle\": \"TOYOTA LANDCRUSER PRADO 20015\",\n        \"price\": 20005.0\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/listings/:listingId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"listings",
+								":listingId"
+							],
+							"variable": [
+								{
+									"key": "listingId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUBLISH_LISTING",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"dealer\": \"00000000-0000-0000-0000-000000000005\",\n        \"vehicle\": \"TOYOTA LANDCRUSER PRADO 20015\",\n        \"price\": 20005.0\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/listings/:listingId/publish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"listings",
+								":listingId",
+								"publish"
+							],
+							"variable": [
+								{
+									"key": "listingId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DRAFT_LISTING",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"dealer\": \"00000000-0000-0000-0000-000000000005\",\n        \"vehicle\": \"TOYOTA LANDCRUSER PRADO 20015\",\n        \"price\": 20005.0\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/listings/:listingId/draft",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"listings",
+								":listingId",
+								"draft"
+							],
+							"variable": [
+								{
+									"key": "listingId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
