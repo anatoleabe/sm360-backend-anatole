@@ -1,6 +1,12 @@
 # SM360 Backend Tech Assignment - By Anatole
 This is a Java Spring Boot project that serves as the backend for SM360 and implements a REST service for managing listings for online advertising services.
 
+#Prerequisites
+Before installing and running the SM360 backend project, you will need to have the following installed on your system:
+
+- Java 17 
+- Maven 3.6.0 or higher
+
 # Features
 The SM360 backend project includes the following features:
 
